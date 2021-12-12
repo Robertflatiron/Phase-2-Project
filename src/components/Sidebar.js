@@ -17,13 +17,11 @@ function Sidebar({ notes, addNewNote, addDisplayNote, handleEditToggle }) {
   
   const handleClick = () => {
     handleNewNote()
-    handleEditToggle(false)
-    console.log("hello")
   }
   
   return (
     <div className="master-detail-element sidebar">
-      <NoteList notes={notes} key={notes.id} addDisplayNote={addDisplayNote} />
+      <NoteList notes={notes} key={notes.id} addDisplayNote={addDisplayNote} handleEditToggle={handleEditToggle} />
       <button onClick={handleClick}>New</button>
     </div>
   );

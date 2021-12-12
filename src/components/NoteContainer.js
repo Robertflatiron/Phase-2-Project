@@ -35,7 +35,8 @@ function NoteContainer() {
     setDisplayNote(note)
   }
 
-  const searchList = notes.filter(note => (note.title.toLowerCase().includes(search.toLowerCase())))
+  const searchList = notes.filter(note => (note.title.toLowerCase().includes(search.toLowerCase()) || 
+  (note.body.toLowerCase().includes(search.toLocaleLowerCase()))))
 
   const addNewNote = (newNote) => {
     setNotes([...notes, newNote])
